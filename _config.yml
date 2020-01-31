@@ -1,6 +1,6 @@
 # Site settings
 title: 为运维而开发
-SEOTitle: 为运维而开发 | dev4ops markdown document center
+SEOTitle: 为运维而开发 | Dev4Ops Markdown Documents
 header-img: img/home-bg.webp
 email: lds@dev4ops.com
 description: "开发、运维 | 廖登松，developer operator andSoftware Engineer"
@@ -13,11 +13,11 @@ future: true
 
 # SNS settings
 RSS: false
-#weibo_username:     huxpro
+#weibo_username:     dev4ops
 zhihu_username:     dev4ops
 github_username:    dev4ops
-#twitter_username:   huxpro
-#facebook_username:  huxpro
+#twitter_username:   dev4ops
+#facebook_username:  dev4ops
 #linkedin_username:  firstname-lastname-idxxxx
 
 
