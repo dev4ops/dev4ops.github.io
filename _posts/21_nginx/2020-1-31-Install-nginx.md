@@ -1,6 +1,6 @@
 ---
 title: "Nginx安装及注意事项"
-subtitle: "「计算机科学偶像」- 彼得·约翰·兰丁"
+subtitle: "在CentOS7下安装Nginx需要注意的事项"
 layout: post
 author: "dev4ops"
 header-style: text
@@ -13,9 +13,9 @@ tags:
 # Install Nginx on CentOS 7
 参考信息：
 * https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-centos-7
-* 
-```shell script
 
+
+```shell script
 yum install epel-release -y
 yum install nginx -y
 

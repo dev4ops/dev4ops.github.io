@@ -1,15 +1,12 @@
 ---
-title: "「SF-PLF」19 PE"
-subtitle: "Programming Language Foundations - Partial Evaluation"
+title: "template文件"
+subtitle: "这是模板文件"
 layout: post
-author: "Hux"
+author: "dev4ops"
 header-style: text
 hidden: true
 tags:
-  - SF (软件基础)
-  - PLF (编程语言基础)
-  - Coq
-  - 笔记
+  - template
 ---
 
 TBD
