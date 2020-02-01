@@ -6,7 +6,9 @@ author: "dev4ops"
 header-style: text
 hidden: true
 tags:
-  - template
+  - CentOS7
+  - 初始化
+  - init
 ---
 
 ## 安装常用工具
