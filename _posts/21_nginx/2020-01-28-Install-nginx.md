@@ -4,7 +4,6 @@ subtitle: "在CentOS7下安装Nginx需要注意的事项"
 layout: post
 author: "dev4ops"
 header-style: text
-hidden: true
 tags:
   - nginx
   - install

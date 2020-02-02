@@ -4,7 +4,6 @@ subtitle: "循环数组、循环读取目录或文件、for循环和while循环"
 layout: post
 author: "dev4ops"
 header-style: text
-hidden: true
 tags:
   - shell
   - 循环

@@ -4,7 +4,6 @@ subtitle: "CentOS7初始化系统的常规命令"
 layout: post
 author: "dev4ops"
 header-style: text
-hidden: true
 tags:
   - CentOS7
   - 初始化
