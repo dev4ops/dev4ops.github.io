@@ -11,7 +11,7 @@ tags:
 ---
 
 ## 安装常用工具
-```shell script
+```
 
 yum update -y
 yum install -y net-tools wget unzip  traceroute bind-utils
@@ -25,8 +25,7 @@ yum install traceroute -y
 ```
 
 ## 禁用交换分区、selinux 等
-```shell script
-
+```
 # 禁用 selinux
 BBC=$(getenforce)
 if [ "${BBC}" != "Disabled" ] ; then
@@ -37,7 +36,6 @@ if [ "${BBC}" != "Disabled" ] ; then
   sed -i 's/^SELINUX=permissive/SELINUX=disabled/g' /etc/sysconfig/selinux
   sed -i 's/^SELINUX=permissive/SELINUX=disabled/g' /etc/selinux/config
 fi
-
 
 # -------------------------------
 

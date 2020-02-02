@@ -12,8 +12,9 @@ tags:
 ---
 
 
-##shell 数组循环
-```shell script
+## shell 数组循环
+
+```
 #首先创建一个数组 
 array=( A B C D 1 2 3 4)
 ###1.标准的for循环
@@ -47,7 +48,7 @@ done
 ```
 
 # linux shell 按行循环读入文件方法
-```shell script
+```
 
 
 #!/bin/bash
@@ -82,7 +83,7 @@ done
 ```
 
 #shell 遍历目录
-```shell script
+```
 
 #!/bin/bash
 function getdir(){

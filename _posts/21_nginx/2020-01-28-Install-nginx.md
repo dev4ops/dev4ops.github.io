@@ -15,7 +15,7 @@ tags:
 * https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-centos-7
 
 
-```shell script
+```
 yum install epel-release -y
 yum install nginx -y
 
@@ -50,7 +50,7 @@ fi
 
 
 # nginx port range
-```shell script
+```
 
 #Port ranges (1.15.10) are specified with the first and last port separated by a hyphen:  http://nginx.org/en/docs/stream/ngx_stream_core_module.html#listen
 
