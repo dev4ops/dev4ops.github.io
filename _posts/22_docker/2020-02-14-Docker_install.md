@@ -5,13 +5,11 @@ layout: post
 author: "dev4ops"
 header-style: text
 tags:
-  - SSH
-  - Xshell
-  - 隧道
-  - tunnel
+  - docker
+  - 安装
+  - docker compose
+  - CentOS7
 ---
-
-
 
 
 # docker部署
@@ -58,22 +56,8 @@ systemctl daemon-reload && systemctl enable docker && systemctl restart docker &
 docker version
 
 
-# 日志保存到fluentd,修改对应的FLUENTD_ADD地址,EFK服务器本身不能使用此配置
-FLUENTD_ADD="192.168.1.114:24224"
-tee /etc/docker/daemon.json <<-EOF
-{
-  "registry-mirrors": ["https://fy156yq5.mirror.aliyuncs.com"],
-  "log-driver": "fluentd",
-  "log-opts": { "fluentd-address": "${FLUENTD_ADD}" },
-  "insecure-registries": [
-    "reg.harbor", 
-    "reg.harbor:80", 
-    "reg.harbor:5000"
-  ]
-}
-EOF
-
 ```
+
 ## dockercompose安装
 ```shell script
 yum update -y
@@ -91,6 +75,24 @@ docker-compose version
 # 使用官方安装脚本自动安装 （仅适用于公网环境）
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 # 此步凑仅安装Docker，还需要对Docker设置和优化。从上面的step4开始
+```
+## 日志保存到fluentd,修改对应的FLUENTD_ADD地址,EFK服务器本身不能使用此配置
+```shell script
+
+FLUENTD_ADD="192.168.1.114:24224"
+tee /etc/docker/daemon.json <<-EOF
+{
+  "registry-mirrors": ["https://fy156yq5.mirror.aliyuncs.com"],
+  "log-driver": "fluentd",
+  "log-opts": { "fluentd-address": "${FLUENTD_ADD}" },
+  "insecure-registries": [
+    "reg.harbor", 
+    "reg.harbor:80", 
+    "reg.harbor:5000"
+  ]
+}
+EOF
+
 ```
 
 # docker 清理所有东西
