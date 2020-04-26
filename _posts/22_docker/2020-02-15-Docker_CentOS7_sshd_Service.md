@@ -12,7 +12,7 @@ tags:
 ---
 
 # 命令脚本
-```shell script
+```
 mkdir -p  /home/bk/data
 mkdir -p  /home/bk/opt
 

@@ -15,7 +15,7 @@ tags:
 # docker部署
 docker参考阿里云Docker CE安装文档：https://yq.aliyun.com/articles/110806
 ## docker 安装
-```shell script
+```
 # step 1: 安装必要的一些系统工具
 yum install -y yum-utils device-mapper-persistent-data lvm2
 # Step 2: 添加软件源信息
@@ -55,11 +55,10 @@ systemctl daemon-reload && systemctl enable docker && systemctl restart docker &
 # 安装校验
 docker version
 
-
 ```
 
 ## dockercompose安装
-```shell script
+```
 yum update -y
 
 yum install -y epel-release
@@ -71,13 +70,13 @@ docker-compose version
 ```
 
 ## 安装异常尝试
-```shell script
+```
 # 使用官方安装脚本自动安装 （仅适用于公网环境）
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 # 此步凑仅安装Docker，还需要对Docker设置和优化。从上面的step4开始
 ```
 ## 日志保存到fluentd,修改对应的FLUENTD_ADD地址,EFK服务器本身不能使用此配置
-```shell script
+```
 
 FLUENTD_ADD="192.168.1.114:24224"
 tee /etc/docker/daemon.json <<-EOF
@@ -96,7 +95,7 @@ EOF
 ```
 
 # docker 清理所有东西
-```shell script
+```
 docker ps -a
 docker rm -f $(docker ps -aq)
 yes| docker container prune
