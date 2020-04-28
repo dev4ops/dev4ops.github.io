@@ -9,9 +9,9 @@ tags:
   - firewall
   - 防火墙开启NAT
 ---
-#firewall常用命令
-```
+# firewall常用命令
 
+```
 #1、重启、关闭、开启firewalld.service服务
 service firewalld restart #重启
 service firewalld start #开启
@@ -44,11 +44,9 @@ firewall-cmd --reload
 ```
 
 # 自定义添加端口
-
 用户可以通过修改配置文件的方式添加端口，也可以通过命令的方式添加端口，注意，修改的内容会在/etc/firewalld/ 目录下的配置文件中还体现。
+
 ```
-
-
 #命令的方式添加端口
 firewall-cmd --permanent --add-port=9527/tcp 
 
@@ -62,10 +60,9 @@ firewall-cmd --permanent --add-port=9527/tcp
 firewall-cmd --zone=public --permanent --add-port=8010/tcp
 
 #--zone=public：指定的zone为public；
-
 ```
 
-## 查询、开放、关闭端口
+# 查询、开放、关闭端口
 
 ```
 # 查询端口是否开放
@@ -85,13 +82,13 @@ firewall-cmd --reload
 #1、firwall-cmd：是Linux提供的操作firewall的一个工具；
 #2、--permanent：表示设置为持久；
 #3、--add-port：标识添加的端口；
-
 ```
 
-### 防火墙开启NAT
+# 防火墙开启NAT
 参考：
 * https://devops.ionos.com/tutorials/deploy-outbound-nat-gateway-on-centos-7/ 
 * http://www.chenlianfu.com/?p=2699
+
 ```
 #传统方法 用下面的方法后可以不用这种方法 -----------------------
 #echo "net.ipv4.ip_forward = 1" >> /etc/sysctl.d/ip_forward.conf
@@ -126,13 +123,12 @@ firewall-cmd --permanent --direct --passthrough ipv4 -t nat -I POSTROUTING -o en
 #重启防火墙
 systemctl restart firewalld.service
 
-
 ```
 
 # centos 7 通过firewall限制或开放IP及端口
 http://huanghaiping.com/article/76.html
-```
 
+```
 #第一：首先查看防火墙是否开启，如未开启，需要先开启防火墙并作开机自启
 systemctl status firewalld  #查看防火墙状态
 systemctl start firewalld   #开启防火墙
@@ -182,8 +178,8 @@ firewall-cmd --zone=public --list-rich-rules  #查看规则是否生效
 
 
 # 限制IP及端口的方式
-```
 
+```
 #限制IP地址访问
 #方式一：Linux防火墙实现
 #阻止所有IP访问
@@ -212,11 +208,10 @@ vim/etc/ssh/sshd_config # 最后一行加入
 ```
 
 
-## CentOS切换为iptables防火墙
+# CentOS切换为iptables防火墙
 切换到iptables首先应该关掉默认的firewalld，然后安装iptables服务。
-```bash
 
-
+```
 #1、关闭firewall：
 service firewalld stop
 systemctl disable firewalld.service #禁止firewall开机启动
@@ -249,6 +244,4 @@ COMMIT
 
 service iptables start #开启
 systemctl enable iptables.service #设置防火墙开机启动
-
-
 ```
