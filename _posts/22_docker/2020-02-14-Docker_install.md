@@ -67,6 +67,17 @@ pip install --upgrade pip
 pip install docker-compose
 yum upgrade python* -y
 docker-compose version
+
+
+#如果上面安装失败，可以直接下载docker-compose命令到对应目录即可
+#https://github.com/docker/compose/releases
+
+curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+ln -s /usr/local/bin/docker-compose /bin/docker-compose
+docker-compose --version
+
+
 ```
 
 ## 安装异常尝试
